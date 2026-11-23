@@ -60,11 +60,16 @@ Syft supports more than just containers. Learn more about [Supported Scan Target
 This command will display the human-readable table _and_ write SBOMs in both **[SPDX](https://spdx.dev/)** and **[CycloneDX](https://cyclonedx.org/)** formats, the two primary industry standards.
 
 ```bash
-syft alpine:latest \                 # what we're scanning
-  -o table \                         # a human-readable table to stdout
-  -o spdx-json=alpine.spdx.json \    # SPDX-JSON formatted SBOM to a file
-  -o cyclonedx-json=alpine.cdx.json  # CycloneDX-JSON formatted SBOM to a file
+syft alpine:latest \
+  -o table \
+  -o spdx-json=alpine.spdx.json \
+  -o cyclonedx-json=alpine.cdx.json
 ```
+
+- `alpine:latest` is what we're scanning
+- `-o table` writes a human-readable table to stdout
+- `-o spdx-json=alpine.spdx.json` writes an SPDX-JSON formatted SBOM to a file
+- `-o cyclonedx-json=alpine.cdx.json` writes a CycloneDX-JSON formatted SBOM to a file
 
 The same table will be displayed, and two SBOM files will be created in the current directory.
 

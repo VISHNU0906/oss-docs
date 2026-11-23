@@ -108,12 +108,12 @@ syft <source> \
   -o spdx-json=sbom.spdx.json
 ```
 
-You can both display to terminal and write to file:
+You can both display to terminal and write to file. Here `-o table` prints the report to stdout and `-o json=sbom.json` writes it to a file:
 
 ```bash
 syft <source> \
-  -o table \           # report to stdout
-  -o json=sbom.json    # write to file
+  -o table \
+  -o json=sbom.json
 ```
 
 ## FAQ
