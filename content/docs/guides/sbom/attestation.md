@@ -136,7 +136,7 @@ To extract and view the SBOM:
 
 ```bash
 cosign verify-attestation --key cosign.pub --type spdxjson docker.io/myorg/myimage:latest | \
-  jq '.payload | @base64d | .payload | fromjson | .predicate'
+  jq '.payload | @base64d | fromjson | .predicate'
 ```
 
 ### Use with vulnerability scanning
@@ -145,7 +145,7 @@ Pipe the verified SBOM directly to Grype for vulnerability analysis:
 
 ```bash
 cosign verify-attestation --key cosign.pub --type spdxjson docker.io/myorg/myimage:latest | \
-  jq '.payload | @base64d | .payload | fromjson | .predicate' | \
+  jq '.payload | @base64d | fromjson | .predicate' | \
   grype
 ```
 
