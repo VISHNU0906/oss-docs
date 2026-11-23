@@ -39,7 +39,7 @@ tools:
     method: github-release
     with:
       repo: gohugoio/hugo
-      assets: '^hugo_extended_withdeploy'
+      assets: '^hugo_[0-9]'
 
   - name: lychee
     version:
